@@ -1,5 +1,4 @@
-#!/bin/bash
-gcc -o cfile
+
 #include <stdio.h>
 
 int main ()
