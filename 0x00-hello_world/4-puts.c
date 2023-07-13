@@ -1,5 +1,6 @@
 #!/bin/bash
-gcc $CFILE
+#include <stdio.h>
+
 int main ()
 { 
 	puts ("""Programming is like building a multilingual puzzle")
