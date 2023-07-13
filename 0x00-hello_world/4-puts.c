@@ -1,4 +1,5 @@
 #!/bin/bash
+gcc $CFILE
 int main ()
 { 
 	puts ("""Programming is like building a multilingual puzzle")
