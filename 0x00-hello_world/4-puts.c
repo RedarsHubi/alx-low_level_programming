@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
- * please just work
-*you're pissing me off
-*/
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
