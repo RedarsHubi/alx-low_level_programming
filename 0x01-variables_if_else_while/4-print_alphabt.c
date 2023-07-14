@@ -7,12 +7,16 @@
  */
 int main(void)
 {
-	char alp[24] = "abcdfghijklmnoprstuvwxyz";
-	int i;
+	int a = 97;
 
-	for (i = 0; i < 26; i++)
+	while (a < 123)
 	{
-		putchar(alp[i]);
+		if (a == 101 || a == 113)
+		{
+			a++;
+			continue;
+		}
+		putchar(a);
 	}
 	putchar('\n');
 	return (0);
