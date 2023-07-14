@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-	int n;
-	int m;
+	int n = 0;
+	int m = 0;
 
 	m = n % 10;
 
