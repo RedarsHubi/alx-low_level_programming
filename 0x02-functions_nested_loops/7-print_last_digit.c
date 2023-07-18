@@ -4,13 +4,12 @@
  * print_last_digit - Prints the last digit of
  * a number.
  *
- * @i: input number as an integer.
+ * @n: input number as an integer.
  *
  * Return: last digit
  */
 int print_last_digit(int n)
 {
-	
 	int l;
 
 	l = n % 10;
