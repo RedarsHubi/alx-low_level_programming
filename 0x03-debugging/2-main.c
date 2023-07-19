@@ -11,7 +11,7 @@ int main(void)
         int a, b, c;
         int largest;
 
-        a = 2;
+        a = 998;
         b = 998;
         c =-111100;
 
