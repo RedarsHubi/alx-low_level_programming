@@ -2,11 +2,11 @@
 
 /**
   * _isupper - Checks for uppercase character
-  * @c: variable for character checked
+  * @c: variable for digit checked
   * Return: 1 if uppercase, 0 otherwise
   **/
 
-int _isupper(int c)
+int _isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 	{
