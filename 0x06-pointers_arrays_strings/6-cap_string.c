@@ -1,28 +1,30 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * capitalizeWords - Capitalizes the first letter of each word in a string.
- * @str: The input string to be modified.
+ * cap_string - capitalizes all words of a string
+ * @s: input string.
+ * Return: the pointer to dest.
  */
-void capitalizeWords(char *str)
+
+char *cap_string(char *s)
 {
-	int capitalizeNext = 1;
+	int count = 0, i;
+	int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	while (*str)
+	if (*(s + count) >= 97 && *(s + count) <= 122)
+		*(s + count) = *(s + count) - 32;
+	count++;
+	while (*(s + count) != '\0')
 	{
-		if (*str >= 'a' && *str <= 'z')
-	{
-		if (capitalizeNext)
+		for (i = 0; i < 13; i++)
 		{
-			*str = *str - ('a' - 'A');
-			capitalizeNext = 0;
+			if (*(s + count) == sep_words[i])
+			{
+				if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
+					*(s + (count + 1)) = *(s + (count + 1)) - 32;
+				break;
+			}
 		}
+		count++;
 	}
-		else if (*str == ' ' || *str == '\t' || *str == '\n')
-		{
-			capitalizeNext = 1;
-		}
-		str++;
-	}
+	return (s);
 }
-
