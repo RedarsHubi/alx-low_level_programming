@@ -1,4 +1,4 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 /**
@@ -13,7 +13,7 @@ int main(void)
 	srand((unsigned int) time(&t));
 	while (c < 2772)
 	{
-		r = rand() % 28;
+		r = rand() % 68;
 		if ((c + r) > 2772)
 			break;
 		c = c + r;
