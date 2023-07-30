@@ -11,14 +11,14 @@ int main(void)
 	time_t t;
 
 	srand((unsigned int) time(&t));
-	while (c < 1000)
+	while (c < 2772)
 	{
-		r = rand() % 128;
-		if ((c + r) > 1000)
+		r = rand() % 50;
+		if ((c + r) > 2772)
 			break;
 		c = c + r;
 		printf("%c", r);
 	}
-	printf("%c\n", (1000 - c));
+	printf("%c\n", (2772 - c));
 	return (0);
 }
