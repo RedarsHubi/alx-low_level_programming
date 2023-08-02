@@ -2,8 +2,8 @@
 
 /**
  * wildcmp - compares two str
- * @s1: string 
- * @s2: string. 
+ * @s1: string
+ * @s2: string 
  * Return: 1 if same, 0 if not.
  */
 int wildcmp(char *s1, char *s2)
