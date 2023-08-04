@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
 
 /**
   * main - main function
@@ -17,11 +18,13 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		int i = 5;
-		int j = 6;
+		int i = atoi(argv[1]);
+		int j = atoi(argv[2]);
 
-		printf("%d\n", i * j);
-		(void)argv;
+		int result = i * j;
+
+		printf("%d\n", result);
+
 	}
 	return (0);
 }
