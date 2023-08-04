@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <ctype.h>
 /**
   * main - main function
   * @argc: integer that that counts args.
@@ -13,20 +13,29 @@ int main(int argc, char *argv[])
 {
 	if (argc > 0)
 	{
-		int i = atoi(argv[1]);
-		int j = atoi(argv[2]);
-		int result = i + j;
+		int i = 0;
 
-		printf("%d\n", result);
-	}
-	else if (argc == 0)
-	{
-		printf("0\n");
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
+		for (i = 0; i < argc; i++)
+		{
+			i = atoi(argv[i]);
+			if (!isdigit(i))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			else if (argc == 0)
+			{
+				printf("0\n");
+			}
+			else
+			{
+				int result = 0;
+
+				result = result + i;
+
+				printf("%d\n", i);
+			}
+		}
 	}
 	return (0);
 }
