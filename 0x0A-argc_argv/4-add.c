@@ -14,28 +14,27 @@ int main(int argc, char *argv[])
 	if (argc > 0)
 	{
 		int i = 0;
+		int j = 0;
+		int result = 0;
 
-		for (i = 0; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
-			i = atoi(argv[i]);
-			if (!isdigit(i))
+			for (j = 0; argv[i][j]; j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (!isdigit(argv[i][j]))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-			else if (argc == 0)
-			{
-				printf("0\n");
-			}
-			else
-			{
-				int result = 0;
-
-				result = result + i;
-
-				printf("%d\n", i);
-			}
+			result += atoi(argv[i]);
 		}
+		printf("%d\n", result);
+	}
+	if (argc == 0)
+	{
+	printf("0\n");
 	}
 	return (0);
 }
+
