@@ -1,4 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 #include "main.h"
+
 /**
   * _islower - determines if char is lowercase
   *@c: character is ASCII table

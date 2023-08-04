@@ -1,4 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 #include "main.h"
+
 /**
 *  _abs - computes an absolute number
 * @i: number as an integer
