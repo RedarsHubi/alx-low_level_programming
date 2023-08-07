@@ -10,12 +10,20 @@
 
 char *create_array(unsigned int size, char c)
 {
-	unsigned int(*size) = (int *)malloc(c * sizeof(char);
+	unsigned int i;
+	char *array;
 
-	if (size == 0)
+	array = malloc(size * sizeof(char));
+
+	if (array == NULL)
 	{
 		return (NULL);
 	}
-	else
-		return (*size);
+
+
+	for (i = 0; i < size; i++)
+	{
+		array[i] = c;
+	}
+	return (array);
 }
