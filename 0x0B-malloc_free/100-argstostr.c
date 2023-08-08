@@ -34,7 +34,7 @@ char *argstostr(int ac, char **av)
 		free(arr);
 		return (NULL);
 	}
-	for (i = j = z; z < in; j++, z++)
+	for (i = j = z = 0; z < in; j++, z++)
 	{
 		if (av[i][j] == '\0')
 		{
@@ -48,5 +48,6 @@ char *argstostr(int ac, char **av)
 			arr[z] = av[i][j];
 		}
 		arr[z] = '\0';
-		return (arr);
 	}
+	return (arr);
+}
