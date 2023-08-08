@@ -21,6 +21,7 @@ char *str_concat(char *s1, char *s2)
 	if (con == NULL)
 	{
 		return (NULL);
+		free(con);
 	}
 	if (s1 == NULL)
 	{
