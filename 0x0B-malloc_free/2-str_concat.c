@@ -36,5 +36,9 @@ char *str_concat(char *s1, char *s2)
 	{
 		con[i + k] = s2[k];
 	}
+	if (con == NULL)
+	{
+		return (NULL);
+	}
 	return (con);
 }
