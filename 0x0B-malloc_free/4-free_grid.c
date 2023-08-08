@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stddef.h>
 /**
-  * alloc_grid - function that returns ptr to 2D array
+  * free_grid - function that returns ptr to 2D array
   * @grid: array to be freed
   * @height: rows
   * Return: 0
