@@ -1,43 +1,52 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
 /**
-  * str_concat - appends a string to another
-  * @s1: string
-  * @s2: string
-  * Return: location of appended strings, otherwise NULL
-  **/
+ * argstostr - concatenates all the arguments
+ * @av: strings to be concatenated
+ * @ac: number of arrays
+ * Return: pointer to new a string
+ */
 
-char *str_concat(char *s1, char *s2)
+char *argstostr(int ac, char **av)
 {
-	int i, j, k;
-	char *con;
+	char *arr;
+	int i, j, in, z;
 
-	if (con == NULL)
+	if (ac == 0)
 	{
 		return (NULL);
 	}
-	if (s1 == NULL)
+	for (i = 0; i < ac; i++)
 	{
-		s1 = "";
+		if (av[i] == NULL)
+		{
+			return (NULL);
+		}
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			in++;
+		}
+		in++;
 	}
-	if (s2 == NULL)
+	arr = malloc((in +1) * sizeof(char));
+	if (arr == NULL)
 	{
-		s2 = "";
+		free(arr);
+		return (NULL);
 	}
-	for (i = 0; s1[i] != '\0'; i++)
-		;
-	for (j = 0; s2[j] != '\0'; j++)
-		;
-	con = malloc(sizeof(char) * (i + j + 1));
-
-	for (k = 0; k < i; k++)
+	for (i = j = z; z < in; j++, z++)
 	{
-		con[k] = s1[k];
+		if (av[i][j] == '\0')
+		{
+			arr[z] = '\n';
+			i++;
+			z++;
+			j=0;
+		}
+		if (z < in - 1)
+		{
+			arr[z] = av[i][j];
+		}
+		arr[z] = '\0';
+		return (arr);
 	}
-	for (k = 0; k <= j; k++)
-	{
-		con[i + k] = s2[k];
-	}
-	return (con);
-}
