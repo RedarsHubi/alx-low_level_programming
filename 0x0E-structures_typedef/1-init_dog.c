@@ -12,11 +12,16 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	int i;
 
 	if (d != NULL)
 	{
-		d->name = name;
+		for (i = 0; name[i] != '\0'; i++)
+			d->name[i] = name[i];
+		d->name[i] = '\0';
 		d->age = age;
-		d->owner = owner;
+		for (i = 0; owner[i] != '\0'; i++)
+			d->owner[i] = owner[i];
+		d->owner[i] = '\0';
 	}
 }
