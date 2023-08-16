@@ -1,15 +1,13 @@
 #include "function_pointers.h"
 
 /**
-  * print_name - function that prints name
-  * @name: string
-  * @f: function that takes string
+  * f - function that prints name
+  * @str: string
   */
 
-void f(char *)
+void f(char *str)
 {
-	int i;
-	char *str;
+	int i = 0;
 
 	while (str[i] != '\0')
 	{
@@ -18,7 +16,11 @@ void f(char *)
 	}
 
 }
-
+/**
+  * print_name - function that prints name
+  * @name: string
+  * @f: function that takes string
+  */
 void print_name(char *name, void (*f)(char *))
 {
 	(*f) (name);
