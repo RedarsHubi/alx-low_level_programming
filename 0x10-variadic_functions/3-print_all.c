@@ -14,6 +14,8 @@ void print_all(const char * const format, ...)
 
 	const char *fmt = format;
 
+	char *str;
+
 	va_start(args, format);
 
 	while (*fmt)
@@ -33,7 +35,11 @@ void print_all(const char * const format, ...)
 				break;
 
 			case 's':
-				printf("%s", va_arg(args, char*));
+				str = va_arg(args, char*);
+				if (str != NULL)
+					printf("%s", va_arg(args, char*));
+				if (str == NULL)
+					printf("(nil)");
 				break;
 		}
 		fmt++;
