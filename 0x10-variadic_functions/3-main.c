@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    print_all("ckpolpifs", 'B', 3, 134.45, "stSchool");
+    print_all("csp", 'C', NULL);
     return (0);
 }
