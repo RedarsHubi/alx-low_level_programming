@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include "lists.h"
 
+void beatfunc(void) __attribute__ ((constructor));
+
 /**
  * beatfunc - prints a string
  * Return: void
