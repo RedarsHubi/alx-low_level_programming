@@ -24,7 +24,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	arr->next = NULL;
 
 	if (*head == NULL)
-		arr = *head;
+		*head = arr;
 	else
 	{
 		current = *head;
