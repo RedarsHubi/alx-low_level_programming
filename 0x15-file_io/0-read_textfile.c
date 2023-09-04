@@ -32,7 +32,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	write(1, poem, store);
+	write(STDOUT_FILENO, poem, store);
 	close(fd);
+	free(poem);
 	return (store);
 }
